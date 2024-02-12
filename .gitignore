@@ -1,0 +1,10 @@
+.nextflow*
+.DS_Store
+work/*
+SRR*
+.Rproj.user
+*.csv
+*.bed
+*.fas
+*.xlsx
+*.pdf
