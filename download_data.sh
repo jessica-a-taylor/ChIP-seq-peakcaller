@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 function get_data { fasterq-dump $1 -O $1; }
 
