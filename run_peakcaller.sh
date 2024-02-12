@@ -41,7 +41,7 @@ fi
 
 cd work; rm -rf *; cd ..;
 cd output;
-mv mergedBroadPeaks.bed "${sample_data[0]}"mergedBroadPeaks.bed;
-mv mergedNarrowPeaks.bed "${sample_data[0]}"mergedNarrowPeaks.bed;
+mv mergedBroadPeaks.bed Wheat-analysis/Data/Peakcaller_output/"${sample_data[0]}"mergedBroadPeaks.bed;
+mv mergedNarrowPeaks.bed Wheat-analysis/Data/Peakcaller_output/"${sample_data[0]}"mergedNarrowPeaks.bed;
 cd ..;
 
