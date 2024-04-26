@@ -248,8 +248,8 @@ process macs2CallPeaksWithInput {
     shell:
     '''
     fastaLength=$(getFastaLength.py !{genomeFasta})
-    macs2 callpeak -c !{controlAlignment} -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsNarrow --name peaks --nomodel --extsize 200
-    macs2 callpeak -c !{controlAlignment} --broad -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsBroad --name peaks --nomodel --extsize 200
+    macs2 callpeak -c !{controlAlignment} -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsNarrow --name peaks
+    macs2 callpeak -c !{controlAlignment} --broad -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsBroad --name peaks
     '''
 }
 
@@ -269,8 +269,8 @@ process macs2CallPeaks {
     shell:
     '''
     fastaLength=$(getFastaLength.py !{genomeFasta})
-    macs2 callpeak -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsNarrow --name peaks --nomodel --extsize 200
-    macs2 callpeak --broad -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsBroad --name peaks --nomodel --extsize 200
+    macs2 callpeak -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsNarrow --name peaks
+    macs2 callpeak --broad -g $fastaLength -q 0.00001 -t !{alignmentSam} --outdir !{inputFastq}_peakCallingResultsBroad --name peaks
     '''
 }
 
